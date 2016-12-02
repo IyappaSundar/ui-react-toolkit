@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- The core Bootstrap CSS library -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- UI React Toolkit bundled CSS -->
+    <link rel="stylesheet" href="ui-react-toolkit-bundle.css"/>
+
+    <!-- The core React library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+
+    <!-- In-browser JSX transformer, remove when pre-compiling JSX. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <!-- UI React Toolkit bundled JS -->
+    <script src="ui-react-toolkit-bundle.js" charset="utf-8"></script>
+
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/jsx">
+        React.render(
+            <UI_React_Toolkit.PaginationBar
+                    pageCount = {10}
+                    totalCount = {88}
+                    onChange = {function(newPageNumber, totalPages, totalCount, pageCount){
+                        console.log("newPageNumber:",newPageNumber);
+                        console.log("totalPages:",totalPages);
+                        console.log("totalCount:",totalCount);
+                        console.log("pageCount:",pageCount);
+                    }} />,
+            document.getElementById('container')
+        );
+    </script>
+
+</body>
+</html>
