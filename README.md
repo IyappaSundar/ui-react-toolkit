@@ -1,2 +1,2 @@
-# react-boilerplate
+# ui-react-toolkit
 Basic React Project Setup
